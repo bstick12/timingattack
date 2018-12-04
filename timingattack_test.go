@@ -43,6 +43,33 @@ func benchmarkLogin(password string, b *testing.B) {
 	}
 }
 
+func BenchmarkLoginKnownLength1(b *testing.B)  { benchmarkLogin("A.........................", b) }
+func BenchmarkLoginKnownLength2(b *testing.B)  { benchmarkLogin("AB........................", b) }
+func BenchmarkLoginKnownLength3(b *testing.B)  { benchmarkLogin("ABC.......................", b) }
+func BenchmarkLoginKnownLength4(b *testing.B)  { benchmarkLogin("ABCD......................", b) }
+func BenchmarkLoginKnownLength5(b *testing.B)  { benchmarkLogin("ABCDE.....................", b) }
+func BenchmarkLoginKnownLength6(b *testing.B)  { benchmarkLogin("ABCDEF....................", b) }
+func BenchmarkLoginKnownLength7(b *testing.B)  { benchmarkLogin("ABCDEFG...................", b) }
+func BenchmarkLoginKnownLength8(b *testing.B)  { benchmarkLogin("ABCDEFGH..................", b) }
+func BenchmarkLoginKnownLength9(b *testing.B)  { benchmarkLogin("ABCDEFGHI.................", b) }
+func BenchmarkLoginKnownLength10(b *testing.B) { benchmarkLogin("ABCDEFGHIJ................", b) }
+func BenchmarkLoginKnownLength11(b *testing.B) { benchmarkLogin("ABCDEFGHIJK...............", b) }
+func BenchmarkLoginKnownLength12(b *testing.B) { benchmarkLogin("ABCDEFGHIJKL..............", b) }
+func BenchmarkLoginKnownLength13(b *testing.B) { benchmarkLogin("ABCDEFGHIJKLM.............", b) }
+func BenchmarkLoginKnownLength14(b *testing.B) { benchmarkLogin("ABCDEFGHIJKLMN............", b) }
+func BenchmarkLoginKnownLength15(b *testing.B) { benchmarkLogin("ABCDEFGHIJKLMNO...........", b) }
+func BenchmarkLoginKnownLength16(b *testing.B) { benchmarkLogin("ABCDEFGHIJKLMNOP..........", b) }
+func BenchmarkLoginKnownLength17(b *testing.B) { benchmarkLogin("ABCDEFGHIJKLMNOPQ.........", b) }
+func BenchmarkLoginKnownLength18(b *testing.B) { benchmarkLogin("ABCDEFGHIJKLMNOPQR........", b) }
+func BenchmarkLoginKnownLength19(b *testing.B) { benchmarkLogin("ABCDEFGHIJKLMNOPQRS.......", b) }
+func BenchmarkLoginKnownLength20(b *testing.B) { benchmarkLogin("ABCDEFGHIJKLMNOPQRST......", b) }
+func BenchmarkLoginKnownLength21(b *testing.B) { benchmarkLogin("ABCDEFGHIJKLMNOPQRSTU.....", b) }
+func BenchmarkLoginKnownLength22(b *testing.B) { benchmarkLogin("ABCDEFGHIJKLMNOPQRSTUV....", b) }
+func BenchmarkLoginKnownLength23(b *testing.B) { benchmarkLogin("ABCDEFGHIJKLMNOPQRSTUVW...", b) }
+func BenchmarkLoginKnownLength24(b *testing.B) { benchmarkLogin("ABCDEFGHIJKLMNOPQRSTUVWX..", b) }
+func BenchmarkLoginKnownLength25(b *testing.B) { benchmarkLogin("ABCDEFGHIJKLMNOPQRSTUVWXY.", b) }
+func BenchmarkLoginKnownLength26(b *testing.B) { benchmarkLogin("ABCDEFGHIJKLMNOPQRSTUVWXYZ", b) }
+
 func BenchmarkLogin1(b *testing.B)  { benchmarkLogin("A", b) }
 func BenchmarkLogin2(b *testing.B)  { benchmarkLogin("AB", b) }
 func BenchmarkLogin3(b *testing.B)  { benchmarkLogin("ABC", b) }
